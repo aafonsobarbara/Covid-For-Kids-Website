@@ -158,6 +158,9 @@ img {
   .main {
     padding: 30px 30px;
   }
+  .text-2 {
+    font-size: 2em;
+  }
 }
 
 /* *SOBRE */
@@ -212,15 +215,14 @@ img {
 
 .contagio {
   display: flex;
-  margin: 60px 60px;
   flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 60px;
 }
-
 .textos-contagio {
-  flex: 1 11 550px;
   max-width: 550px;
+  align-self: center;
 }
-
 .textos-contagio h1 {
   letter-spacing: -0.015em;
   margin-bottom: 30px;
@@ -234,49 +236,38 @@ img {
   list-style-position: inside;
   list-style-image: url(/imagens/Ellipse4.svg);
 }
-
-.imgs-contagio {
-  flex: 1 1 0;
-  margin-left: 30px;
-  display: flex;
-  flex-flow: column wrap;
-}
-.imgs-contagio .divider {
+.boxes-contagio {
   display: flex;
   justify-content: space-around;
-  padding: 10px 10px;
+  flex-wrap: wrap;
+}
+.box-1-contg {
+  font-size: 1.25em;
+  letter-spacing: 0.02em;
+  text-align: center;
+  padding: 20px 0;
+  margin: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+.box-1-contg img {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+}
+.box-1-contg .icon {
+  width: 50px;
+  margin: 0 auto;
+}
+
+.box-1-contg p {
+  padding-top: 30px;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.125em;
 }
-.imgs-contagio .divider img {
-  max-width: 180px;
-}
-.imgs-contagio .divider > p:first-child {
-  margin-left: 50px;
-}
 
-@media (max-width: 500px) {
-  .contagio {
-    margin: 30px;
-  }
-  .imgs-contagio {
-    margin: 15px 0;
-  }
-  .imgs-contagio .divider {
-    font-size: 1em;
-  }
-  .imgs-contagio .divider img {
-    max-width: 100px;
-  }
-  .imgs-contagio .divider > p:first-child {
-    margin-left: 0px;
-  }
-  .imgs-contagio .divider > p {
-    margin: 0 10px;
-    text-align: center;
-  }
-}
 /* *SINTOMAS */
 .sintomas {
   text-align: center;
@@ -305,6 +296,8 @@ img {
 .grade-sintomas img {
   margin: 0 auto;
   padding: 30px 0;
+  width: 200px;
+  height: 200px;
 }
 .sintoma2 {
   grid-area: s2;
@@ -321,6 +314,18 @@ img {
   background: var(--neutral-block1);
   border-radius: 0 0 101px 0;
   padding-bottom: 30px;
+}
+
+@media (max-width: 400px) {
+  .grade-sintomas {
+    grid-template-columns: 1fr;
+  }
+  .sintoma1,
+  .sintoma2,
+  .sintoma3,
+  .sintoma4 {
+    grid-area: initial;
+  }
 }
 
 /* *PREVENÇAO */
