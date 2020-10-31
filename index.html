@@ -20,8 +20,13 @@
             <div class="menu-logo">
                 <a href="" class="logo"><img src="imagens/logo.svg" alt="Logo"></a>
             </div>
+
+            <div class="toggle-menu">
+                <h1 id="toggle-bar"> <a>&#9776;</a> </h1>
+            </div>
+
             <nav class="menu-nav">
-                <ul>
+                <ul class="menu-ul">
                     <li> <a href="#sobre">Sobre</a></li>
                     <li> <a href="#contagio">Contaminação</a></li>
                     <li> <a href="#sintomas">Sintomas</a></li>
@@ -30,6 +35,7 @@
 
                 </ul>
             </nav>
+
         </div>
     </header>
 
@@ -76,7 +82,7 @@
 
 
     <!-- -contagio -->
-    <div class="contagio">
+    <div class="contagio" id="contagio">
         <div class="textos-contagio">
             <h1>Contágio</h1>
             <p>A transmissão acontece de uma pessoa doente para outra ou por contato próximo por
@@ -173,6 +179,18 @@
         <p>Equipe 5 - UNIFIPMOC</p>
         <p>by @babilsa</p>
     </footer>
+
+
+    <script>
+        function toggleMenu() {
+            let getMenu = document.querySelector(".menu-ul");
+            getMenu.classList.toggle("toggle-menu");
+        }
+
+        let getHamburger = document.querySelector("#toggle-bar");
+
+        getHamburger.addEventListener("click", toggleMenu);    
+    </script>
 
 
 </body>
