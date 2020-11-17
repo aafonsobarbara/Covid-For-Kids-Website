@@ -444,6 +444,26 @@ img {
 .bg-game h1 {
   margin-bottom: 30px;
 }
+.botao-fim {
+  display: none;
+}
+.link {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media (max-width: 584px) {
+  .iframe {
+    display: none;
+  }
+  .bg-game h1 {
+    margin-bottom: 0;
+  }
+  .link {
+    pointer-events: initial;
+    cursor: pointer;
+  }
+}
 /* *FOOTER  */
 
 .footer {
