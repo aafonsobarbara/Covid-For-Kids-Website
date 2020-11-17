@@ -216,6 +216,9 @@ img {
   color: white;
   padding: 25px 10px;
 }
+.inf2:hover {
+  background-color: var(--primary-two);
+}
 
 @media (max-width: 500px) {
   .main {
